@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:todo_app/home_page.dart';
+import 'package:todo_app/todo_bloc/todo_bloc.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  HydratedBloc.storage = await HydratedStorage.build(
+    storageDirectory: await getTemporaryDirectory()
+  );
   runApp(const MyApp());
 }
 
@@ -12,11 +21,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Todo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: const ColorScheme.light(
+          background: Colors.white,
+          onBackground: Colors.black,
+          primary: Colors.yellowAccent,
+          onPrimary: Colors.black,
+          secondary: Colors.lightGreen,
+          onSecondary: Colors.white
+        ),
         useMaterial3: true,
       ),
-      home: const Text("hello"),
+      home: BlocProvider<TodoBloc>(
+        create: (context) => TodoBloc()..add(
+          TodoStarted()
+        ),
+        child: const HomePage()
+      ),
     );
   }
 }
