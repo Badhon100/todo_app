@@ -1,16 +1,14 @@
 # todo_app
 
-A new Flutter project.
+A new Flutter project for android to maintain daily task.
+Here I have used Hydrated BLoC in order to keep the state of the App inside our local Data Storage.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+And also the dependencies are-
+  cupertino_icons: ^1.0.2
+  flutter_slidable: ^3.0.0
+  hydrated_bloc: ^9.1.2
+  bloc: ^8.1.2
+  flutter_bloc: ^8.1.3
+  meta: ^1.9.1
+  equatable: ^2.0.5
+  path_provider: ^2.1.0
