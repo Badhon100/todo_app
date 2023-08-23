@@ -12,3 +12,13 @@ And also the dependencies are-
   meta: ^1.9.1
   equatable: ^2.0.5
   path_provider: ^2.1.0
+
+
+HomePage:
+![homepage](https://github.com/Badhon100/todo_app/assets/32125810/8e8ab529-d7ab-4d1c-b1ba-7cb14010fc8f)
+
+Add Task:
+![add_task](https://github.com/Badhon100/todo_app/assets/32125810/d955b050-3de8-4884-ad1b-fabc887e86f3)
+
+Delete Task:
+![delete_task](https://github.com/Badhon100/todo_app/assets/32125810/b4982a74-9819-4747-b876-fcca67fa09f5)
